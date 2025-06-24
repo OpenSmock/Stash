@@ -80,6 +80,6 @@ Stash new serialize: object.
 ```st
 Metacello new
 	baseline: 'StashSerialization';
-	repository: 'github://Nyan11/Stash:master/src';
+	repository: 'github://OpenSmock/Stash:master/src';
 	load
 ```
