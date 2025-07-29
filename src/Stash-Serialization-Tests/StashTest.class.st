@@ -388,6 +388,24 @@ StashTest >> testString1 [
 ]
 
 { #category : #tests }
+StashTest >> testString10 [
+
+	| object source |
+	object := #toto.
+	source := Stash new serialize: object.
+	self assert: source equals: '#toto'
+]
+
+{ #category : #tests }
+StashTest >> testString11 [
+
+	| object source |
+	object := #'toto-titi'.
+	source := Stash new serialize: object.
+	self assert: source equals: '#''toto-titi'''
+]
+
+{ #category : #tests }
 StashTest >> testString2 [
 
 	| object source |
