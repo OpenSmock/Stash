@@ -6,7 +6,7 @@ Class {
 	#instVars : [
 		'model4'
 	],
-	#category : #'Stash-Serialization-test-cases'
+	#category : #'Stash-Serialization-Tests'
 }
 
 { #category : #initialization }

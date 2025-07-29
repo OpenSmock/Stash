@@ -1,7 +1,7 @@
 Class {
 	#name : #StashOnlySetTest,
 	#superclass : #TestCase,
-	#category : #'Stash-Serialization-test-cases'
+	#category : #'Stash-Serialization-Tests'
 }
 
 { #category : #tests }
