@@ -377,3 +377,92 @@ StashTest >> testPoint2 [
 	source := Stash new serialize: object.
 	self assert: source equals: '-45 @ 70'
 ]
+
+{ #category : #tests }
+StashTest >> testString1 [
+
+	| object source |
+	object := 'hello'.
+	source := Stash new serialize: object.
+	self assert: source equals: '''hello'''
+]
+
+{ #category : #tests }
+StashTest >> testString2 [
+
+	| object source |
+	object := '<?xml>'.
+	source := Stash new serialize: object.
+	self assert: source equals: '''<?xml>'''
+]
+
+{ #category : #tests }
+StashTest >> testString3 [
+
+	| object source |
+	object := '<1>'.
+	source := Stash new serialize: object.
+	self assert: source equals: '''<1>'''
+]
+
+{ #category : #tests }
+StashTest >> testString4 [
+
+	| object source |
+	object := '5 < 10'.
+	source := Stash new serialize: object.
+	self assert: source equals: '''5 < 10'''
+]
+
+{ #category : #tests }
+StashTest >> testString5 [
+
+	| object source |
+	object := '%<2<3<>>5<%<?<8>><1<'.
+	source := Stash new serialize: object.
+	self assert: source equals: '''%<2<3<>>5<%<?<8>><1<'''
+]
+
+{ #category : #tests }
+StashTest >> testString6 [
+
+	| object source |
+	object := '<'.
+	source := Stash new serialize: object.
+	self
+		assert: source
+		equals: '''<'''
+]
+
+{ #category : #tests }
+StashTest >> testString7 [
+
+	| object source |
+	object := '%<'.
+	source := Stash new serialize: object.
+	self
+		assert: source
+		equals: '''%<'''
+]
+
+{ #category : #tests }
+StashTest >> testString8 [
+
+	| object source |
+	object := '%%<'.
+	source := Stash new serialize: object.
+	self
+		assert: source
+		equals: '''%%<'''
+]
+
+{ #category : #tests }
+StashTest >> testString9 [
+
+	| object source |
+	object := '%%%<%%%%%%%%<%%%<%%<%<<%'.
+	source := Stash new serialize: object.
+	self
+		assert: source
+		equals: '''%%%<%%%%%%%%<%%%<%%<%<<%'''
+]

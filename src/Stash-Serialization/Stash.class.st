@@ -109,7 +109,6 @@ Stash >> serialize: anObject [
 { #category : #adding }
 Stash >> sourceCode [
 
-	
 	| expr |
 	expr := RBParser parseExpression: stream contents expandMacros.
 	^ RBSimpleFormatter format: expr
