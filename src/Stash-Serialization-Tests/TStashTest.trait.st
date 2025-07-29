@@ -1,6 +1,6 @@
 Trait {
 	#name : #TStashTest,
-	#category : #'Stash-Serialization-test-cases'
+	#category : #'Stash-Serialization-Tests'
 }
 
 { #category : #'as yet unclassified' }

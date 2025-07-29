@@ -1,5 +1,5 @@
 Class {
 	#name : #StashTestTraitsSubClass,
 	#superclass : #StashTestTraits,
-	#category : #'Stash-Serialization-test-cases'
+	#category : #'Stash-Serialization-Tests'
 }

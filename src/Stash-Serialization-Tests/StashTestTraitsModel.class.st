@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'test'
 	],
-	#category : #'Stash-Serialization-test-cases'
+	#category : #'Stash-Serialization-Tests'
 }
 
 { #category : #accessing }
